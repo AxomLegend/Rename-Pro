@@ -30,7 +30,7 @@ AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split( ))
 PROCESS_MAX_TIMEOUT = int(os.environ.get("TIME_LIMIT"))
 ADL_BOT_RQ = {}
 START_TEXT = """
-Hello {},\nI'm a Aero Telegram File or Media Aero Renmaer  with Permanent Thumbnail Support. 🔥
+Hello {},\nI'm a Telegram File or Media Renmaer  with Permanent Thumbnail Support. 🔥
 
 Made by Mr. @Dlaize
 """
@@ -48,21 +48,21 @@ HELP_TEXT = """
 <b><u>Show Thumbnail</u></b>
 ➠ Send /showthumb for view current thumbnail.
 
-Made by @Shinpei_XD
+Made by @BDNetwork
 """
 ABOUT_TEXT = """
-**🎗️ Bot :** `RenameBot v2`
-**🎗️ Creator :** [Shinpei](https://telegram.me/Shinpei_XD)
-**🎗️ Channel :** [Compass Bots](https://telegram.me/Official_Hindi_Anime)
-**🎗️ Source :** [Click here](https://github.com/Aaaakkkkbot/Aero-Rename)
+**🎗️ Bot :** `BDRenamer_Bot`
+**🎗️ Creator :** [BDNETWORK](https://telegram.me/BDNetwork)
+**🎗️ Channel :** [Anime Channel](https://telegram.me/Dub_Animes)
+**🎗️ Source :** [Click here](Unavailable)
 **🎗️ Language :** [Python3](https://python.org)
 **🎗️ Library :** [Pyrogram v1.2.0](https://pyrogram.org)
 **🎗️ Server :** [Heroku](https://heroku.com)
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Index Channel', url='https://telegram.me/Official_Hindi_Anime'),
-        InlineKeyboardButton('Feedback', url='https://telegram.me/Shinpei_XD')
+        InlineKeyboardButton('Anime Channel', url='https://telegram.me/Dub_Animes'),
+        InlineKeyboardButton('Feedback', url='https://telegram.me/BDNetwork')
         ],[
         InlineKeyboardButton('♨️ Help', callback_data='help'),
         InlineKeyboardButton('ⓘ About', callback_data='about'),
@@ -159,7 +159,7 @@ async def save_photo(bot, update):
         )
         await bot.send_message(
             chat_id=update.chat.id,
-            text="<b>🖼️ Aero Thumbnail Saved ☑️\nThis Is Permanent Until</b> /delthumb ",
+            text="<b>🖼️ Thumbnail Saved ☑️\nThis Is Permanent Until</b> /delthumb ",
             reply_to_message_id=update.message_id
         )
 
@@ -178,7 +178,7 @@ async def delete_thumbnail(bot, update):
         pass
     await bot.send_message(
         chat_id=update.chat.id,
-        text="<b>🖼️ aero Thumbnail cleared succesfully🤦</b>",
+        text="<b>🖼️ Thumbnail cleared succesfully🤦</b>",
         reply_to_message_id=update.message_id
     )
 
@@ -206,7 +206,7 @@ async def show_thumb(bot, update):
     else:
         await bot.send_message(
             chat_id=update.chat.id,
-            text="<b>🖼️ Aero No thumbnails found ☠️</b>",
+            text="<b>🖼️ No thumbnails found ☠️</b>",
             reply_to_message_id=update.message_id
         )
 
@@ -320,7 +320,7 @@ async def rename(bot, message):
                     video=new_file_name,
                     thumb=thumb_image_path,
                     caption=description,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚡ Join Updates Channel ⚡', url='https://telegram.me/cartoon_seriesz')]]),
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚡ Join Updates Channel ⚡', url='https://t.me/Old_Cartoon_Shows_in_Hindi')]]),
                     reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=("<b>Uploading 📤</b>\n", a, c_time)
@@ -341,7 +341,7 @@ async def rename(bot, message):
                     document=new_file_name,
                     thumb=thumb_image_path,
                     caption=description,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/cartoon_seriesz')]]),
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://t.me/Old_Cartoon_Shows_in_Hindi')]]),
                     reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=("<code>Uploading 📤</code>", a, c_time)
